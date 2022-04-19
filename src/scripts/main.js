@@ -127,11 +127,10 @@ window.addEventListener('mousemove', (e)=>{
 
 
 const scene = new THREE.Scene()
-scene.background = new THREE.Color( 0xffffff );
-scene.add(new THREE.AxesHelper(5))
+scene.background = new THREE.Color( 0x00000 );
 
 const light = new THREE.SpotLight()
-light.position.set(5, 5, 5)
+light.position.set(0, 1, 20)
 scene.add(light)
 
 const camera = new THREE.PerspectiveCamera(
@@ -142,7 +141,6 @@ const camera = new THREE.PerspectiveCamera(
 )
 camera.position.z = 10
 
-
 const renderer = new THREE.WebGLRenderer()
 // renderer.physicallyCorrectLights = true
 // renderer.shadowMap.enabled = true
@@ -151,7 +149,10 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
 const controls = new OrbitControls(camera, renderer.domElement)
-controls.enableDamping = true
+controls.enableDamping = true;
+controls.dampingFactor = 0.25;
+controls.enableZoom = false;
+controls.autoRotate = false;
 
 const loader = new GLTFLoader()
 loader.load(
@@ -194,15 +195,15 @@ animate()
 gsap.registerPlugin(ScrollTrigger);
 //set camera position
 camera.position.y = 0;
-camera.position.z = 10;
+camera.position.z = 7;
 camera.position.x = 0;
 
 const timeline = gsap.timeline({ 
   paused: true,
   scrollTrigger: {
     trigger: renderer.domElement,
-    start: '+=100px',
-    end: '+=500px',
+    start: 'top top',
+    end: '+=1000px',
     pin: true,
     scrub: true,  
 	markers: true, 
@@ -210,7 +211,7 @@ const timeline = gsap.timeline({
 })
 
 timeline
-.to(camera.position, { x: -0,ease: "none" })
-.to(camera.rotation, { y: -10, ease: "none" }, "<")
-.to(camera.rotation, { y: -3, ease: "none" })
-.to(camera.position, { z: 20, ease: "none" })
+.to(camera.position, { y: 10,ease: "none" })
+.to(camera.rotation, { x: -1.57, ease: "none" })
+.to(camera.position, { y: 9,ease: "none" })
+.to(camera.position, { z: -0.2,ease: "none" })
