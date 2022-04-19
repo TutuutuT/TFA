@@ -1,23 +1,18 @@
 @import 'utils/variables';
 @import 'components/type';
+@import 'components/Boule';
 
 *{
     margin: 0;
     padding: 0;
-    background-color: black;
-}
-
-h1{
-    width: 100%;
-    text-align: center;
-    margin-top: 2ch;
-    margin-bottom: 2ch;
-    color: white;
-    background-image: url("/src/assets/images/HEHEHE1.png");
-    background-position: center;
-    background-size: cover;
 }
 
 canvas{
     position: absolute;
+    height: 100%;
+    border: 2px solid red;
+}
+
+body{
+    
 }
