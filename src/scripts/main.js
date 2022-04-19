@@ -130,7 +130,7 @@ const scene = new THREE.Scene()
 scene.background = new THREE.Color( 0x00000 );
 
 const light = new THREE.SpotLight()
-light.position.set(0, 1, 20)
+light.position.set(0, 5, 20)
 scene.add(light)
 
 const camera = new THREE.PerspectiveCamera(
@@ -156,7 +156,7 @@ controls.autoRotate = false;
 
 const loader = new GLTFLoader()
 loader.load(
-    'assets/images/Apple.glb',
+    'assets/images/Apple2.glb',
     function (gltf) {
         scene.add(gltf.scene)
     },
@@ -211,7 +211,7 @@ const timeline = gsap.timeline({
 })
 
 timeline
-.to(camera.position, { y: 10,ease: "none" })
+.to(camera.position, { y: 1,ease: "none" })
+.to(camera.position, { z: -0.2,ease: "none" })
 .to(camera.rotation, { x: -1.57, ease: "none" })
 .to(camera.position, { y: 9,ease: "none" })
-.to(camera.position, { z: -0.2,ease: "none" })

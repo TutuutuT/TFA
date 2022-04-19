@@ -5,12 +5,30 @@
 *{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 canvas{
+    z-index: 1;
     position: absolute;
 }
 
-body{
+.header{
+    position: absolute;
+    color: white;
+    z-index: 99;
+    width: 100%;
+    margin-top: 45vh;
+}
+
+.header__text{
+    text-align: center;
+}
+
+.main{
+
+}
+
+.texte{
     
 }
