@@ -223,7 +223,10 @@ timeline
 .to(camera.position, { y: 9,ease: "none" })//end premiere 1000px
 
 
+//anim gsap
+
+
 gsap.from(".title", {
     scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
-    x: 100
+    y: 100
   });
