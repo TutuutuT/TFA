@@ -146,13 +146,15 @@ const renderer = new THREE.WebGLRenderer()
 // renderer.shadowMap.enabled = true
 // renderer.outputEncoding = THREE.sRGBEncoding
 renderer.setSize(window.innerWidth, window.innerHeight)
-document.body.appendChild(renderer.domElement)
+// document.body.appendChild(renderer.domElement)
+document.getElementById("three").appendChild(renderer.domElement)
 
 const controls = new OrbitControls(camera, renderer.domElement)
 controls.enableDamping = true;
 controls.dampingFactor = 0.25;
 controls.enableZoom = false;
 controls.autoRotate = false;
+controls.object = false;
 
 const loader = new GLTFLoader()
 loader.load(
@@ -204,6 +206,7 @@ const timeline = gsap.timeline({
     trigger: renderer.domElement,
     start: 'top top',
     end: '+=1000px',
+    //end premiere 1000px
     pin: true,
     scrub: true,  
 	markers: true, 
@@ -214,4 +217,7 @@ timeline
 .to(camera.position, { y: 1,ease: "none" })
 .to(camera.position, { z: -0.2,ease: "none" })
 .to(camera.rotation, { x: -1.57, ease: "none" })
+.to(camera.position, { y: 7,ease: "none" })
+.to(camera.position, { y: 8,ease: "none" })
 .to(camera.position, { y: 9,ease: "none" })
+.to(camera.position, { y: 9,ease: "none" })//end premiere 1000px
