@@ -23,6 +23,7 @@ canvas{
 
 .header__text{
     text-align: center;
+    font-size: 60px;
 }
 
 .main{
@@ -43,4 +44,22 @@ canvas{
     color: white;
     font-size: 40px;
     margin-left: 4ch;
+}
+
+.t-titre{
+    overflow: hidden;
+    background-color: transparent;
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.b-titre{
+    overflow: hidden;
+    background-color: transparent;
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
 }

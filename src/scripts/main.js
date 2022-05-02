@@ -22,6 +22,24 @@ window.addEventListener('mousemove', (e)=>{
 })
 
 
+// apparition titres
+
+
+gsap.from('.t-titre',{
+    delay: 0.5,
+    y: 100,
+    duration: 0.7,
+    stagger: 0.05,
+    ease: 'easeIn'
+});
+
+gsap.from('.b-titre',{
+    delay: 0.5,
+    y: 100,
+    duration: 0.7,
+    stagger: 0.05,
+    ease: 'easeIn'
+});
 
 
 
@@ -158,7 +176,7 @@ controls.object = false;
 
 const loader = new GLTFLoader()
 loader.load(
-    'assets/images/Apple2.glb',
+    'assets/images/Apple.glb',
     function (gltf) {
         scene.add(gltf.scene)
     },
