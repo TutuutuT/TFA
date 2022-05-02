@@ -2,6 +2,11 @@
 @import 'components/type';
 @import 'components/Boule';
 
+@font-face {
+    font-family: "Machina";
+    src: url("/assets/fonts/NeueMachina-Ultrabold.otf") format("opentype");
+   }
+
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +15,7 @@
 
 canvas{
     z-index: 1;
-    position: absolute;
+    position: relative;
 }
 
 .header{
@@ -27,23 +32,24 @@ canvas{
 }
 
 .main{
-
+    
 }
 
 #three{
-   height: 200vh;
+   height: auto;
 }
 
 .pres{
     background-color: #000;
-    padding-top: 20%;
+    padding-top: 10ch;
     height: 100vh;
 }
 
 .title{
     color: white;
     font-size: 40px;
-    margin-left: 4ch;
+    margin-left: 2ch;
+    font-family: "Machina";
 }
 
 .t-titre{
@@ -59,7 +65,65 @@ canvas{
 .b-titre{
     overflow: hidden;
     background-color: transparent;
-    font-size: 20px;
+    font-size: 65px;
     text-align: center;
-    width: 300px;
+    width: 10ch;
+    position: absolute;
+}
+
+.navbar{
+    width: 65ch;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+}
+
+.style-list{
+}
+
+.list__item{
+    display: inline-block;
+    color: white;
+    margin-left: 3ch;
+    margin-right: 3ch;
+}
+
+.button-nav{
+    position: relative;
+    width: 120px;
+    height: 45px;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-right: 11ch;
+    margin-top: -45px;
+    z-index: 99;
+}
+
+.button-nav--bck{
+    position: relative;
+    width: 40px;
+    height: 7px;
+    background: #C82E44;
+    margin-top: -7px;
+    float: right;
+    margin-right: 15ch;
+    z-index: 1;
+}
+
+.button-nav__txt{
+    margin-left: auto;
+    margin-right: auto;
+    background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+    background-image: url(../assets/images/HEHEHE.jpg);
+    background-position: center;
+    background-size: cover;
 }

@@ -26,10 +26,9 @@ window.addEventListener('mousemove', (e)=>{
 
 
 gsap.from('.t-titre',{
-    delay: 0.5,
+    delay: 0.7,
     y: 100,
     duration: 0.7,
-    stagger: 0.05,
     ease: 'easeIn'
 });
 
@@ -37,7 +36,6 @@ gsap.from('.b-titre',{
     delay: 0.5,
     y: 100,
     duration: 0.7,
-    stagger: 0.05,
     ease: 'easeIn'
 });
 
@@ -247,4 +245,11 @@ timeline
 gsap.from(".title", {
     scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
     y: 100
+  });
+
+gsap.from(".list__item", {
+    scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
+    y: 100,
+    delay: 0.2,
+    stagger: 0.05,
   });
