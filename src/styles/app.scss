@@ -7,16 +7,27 @@
     src: url("/assets/fonts/NeueMachina-Ultrabold.otf") format("opentype");
    }
 
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;600;800&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
+a{
+    text-decoration: none;
+}
+
 canvas{
     z-index: 1;
     position: relative;
 }
+
+::selection {
+    color: black;
+    background: white;
+  }
 
 .header{
     position: absolute;
@@ -42,7 +53,6 @@ canvas{
 .pres{
     background-color: #000;
     padding-top: 10ch;
-    height: 100vh;
 }
 
 .title{
@@ -90,6 +100,15 @@ canvas{
     margin-right: 3ch;
 }
 
+.list__item:hover{
+    background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+    background-image: url(../assets/images/HEHEHE.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 .button-nav{
     position: relative;
     width: 120px;
@@ -104,6 +123,13 @@ canvas{
     margin-right: 11ch;
     margin-top: -45px;
     z-index: 99;
+    cursor: pointer;
+}
+
+.button-nav:hover{
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
 }
 
 .button-nav--bck{
@@ -126,4 +152,36 @@ canvas{
     background-image: url(../assets/images/HEHEHE.jpg);
     background-position: center;
     background-size: cover;
+}
+
+.s-title{
+    font-family: 'Machina';
+    font-size: 48px;
+    color: white;
+    margin-top: 350px;
+    margin-left: 4ch;
+    margin-bottom: 20px;
+}
+
+.s-title__txt{
+    margin-left: 6.7ch;
+    color: white;
+    width: 34ch;
+    font-size: 30px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 200;
+}
+
+.s-title__img{
+    width: 331px;
+    float: right;
+    margin-right: 200px;
+    margin-top: -400px;
+}
+
+.pres--bck::before{
+    content: "";
+    background-color: red;
+    height: 300px;
+    width: 100%;
 }

@@ -253,3 +253,19 @@ gsap.from(".list__item", {
     delay: 0.2,
     stagger: 0.05,
   });
+
+  gsap.from(".button-nav", {
+    scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
+    y: 100,
+    opacity: 0,
+    delay: 0.2,
+    stagger: 0.05,
+  });
+
+  gsap.from(".button-nav--bck", {
+    scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
+    y: 100,
+    opacity: 0,
+    delay: 0.2,
+    stagger: 0.05,
+  });
