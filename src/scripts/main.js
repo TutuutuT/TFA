@@ -158,7 +158,7 @@ controls.object = false;
 
 const loader = new GLTFLoader()
 loader.load(
-    'assets/images/Apple2.glb',
+    'assets/images/Apple.glb',
     function (gltf) {
         scene.add(gltf.scene)
     },
