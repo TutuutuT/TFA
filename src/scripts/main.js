@@ -11,17 +11,6 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 
-// boule 
-
-var boule = document.querySelector('.boule');
-window.addEventListener('mousemove', (e)=>{
-    let leftPos = e.pageX;
-    let topPos = e.pageY;
-    boule.style.left= leftPos+'px';
-    boule.style.top= topPos+'px';
-})
-
-
 // apparition titres
 
 
@@ -237,6 +226,7 @@ timeline
 .to(camera.position, { y: 8,ease: "none" })
 .to(camera.position, { y: 9,ease: "none" })
 .to(camera.position, { y: 9,ease: "none" })//end premiere 1000px
+// .to(camera.position, { x: -5,ease: "none" })
 
 
 //anim gsap
@@ -244,13 +234,14 @@ timeline
 
 gsap.from(".title", {
     scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
-    y: 100
+    y: 100,
+    delay: 0.5,
   });
 
 gsap.from(".list__item", {
     scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
     y: 100,
-    delay: 0.2,
+    delay: 0.7,
     stagger: 0.05,
   });
 
@@ -258,7 +249,7 @@ gsap.from(".list__item", {
     scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
     y: 100,
     opacity: 0,
-    delay: 0.2,
+    delay: 0.7,
     stagger: 0.05,
   });
 
@@ -266,6 +257,19 @@ gsap.from(".list__item", {
     scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
     y: 100,
     opacity: 0,
-    delay: 0.2,
+    delay: 0.7,
     stagger: 0.05,
+  });
+
+
+  gsap.to("#three", {
+    scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
+    display: "none",
+    markers: true,
+  });
+
+  gsap.to(".nest-head", {
+    scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
+    display: "none",
+    markers: true,
   });
