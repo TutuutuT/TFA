@@ -163,7 +163,7 @@ controls.object = false;
 
 const loader = new GLTFLoader()
 loader.load(
-    'assets/images/Apple.glb',
+    'assets/images/Apple3.glb',
     function (gltf) {
         scene.add(gltf.scene)
     },
