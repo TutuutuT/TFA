@@ -34,11 +34,15 @@ canvas{
     z-index: 99;
     width: 100%;
     margin-top: 42vh;
+    overflow: hidden;
 }
 
 .header{
-    background-color: #000;
     padding-top: 50px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 .header__text{
@@ -51,12 +55,15 @@ canvas{
 }
 
 #three{
-   height: auto;
+   position: fixed;
+   z-index: 1;
 }
 
-.pres{
+.intro{
     background-color: #000;
-    padding-top: 10ch;
+    z-index: 999;
+    position: relative;
+    margin-top: 1500px;
 }
 
 .title{
@@ -80,82 +87,79 @@ canvas{
     overflow: hidden;
     background-color: transparent;
     font-size: 65px;
-    text-align: center;
     width: 10ch;
     position: absolute;
 }
 
 .navbar{
-    width: 65ch;
+    width: fit-content;
     position: relative;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 12px;
+    overflow-y: hidden;
 }
 
 .style-list{
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(40px);
+    border-radius: 13px;
+    transition: 200ms;
+   
 }
 
 .list__item{
     display: inline-block;
     color: white;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    margin-bottom: -11px;
+    margin-left: -5px;
+    transition: 200ms;
 }
 
 .list__item:hover{
-    background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
-    background-image: url(../assets/images/HEHEHE.jpg);
-    background-position: center;
-    background-size: cover;
+    color: rgb(0, 0, 0);
+    background-color: white;
 }
 
 .button-nav{
     position: relative;
     width: 120px;
-    height: 45px;
-    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    height: 46px;
+    background: rgb(255, 255, 255);
     border-radius: 13px;
     display: flex;
     align-items: center;
     float: right;
     margin-right: 11ch;
-    margin-top: -45px;
+    margin-top: -46px;
     z-index: 99;
+    box-sizing: border-box;
     cursor: pointer;
 }
 
 .button-nav:hover{
-    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
+    background: rgb(0, 0, 0);
+    border: 1px solid #fff;
+    transition: 200ms;
 }
 
-.button-nav--bck{
-    position: relative;
-    width: 40px;
-    height: 7px;
-    background: #C82E44;
-    margin-top: -7px;
-    float: right;
-    margin-right: 15ch;
-    z-index: 1;
+.button-nav:hover .button-nav__txt{
+    color: #fff;
+    transition: 200ms;
 }
 
 .button-nav__txt{
     margin-left: auto;
     margin-right: auto;
-    background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
-    background-image: url(../assets/images/HEHEHE.jpg);
-    background-position: center;
-    background-size: cover;
+    color: #000;
+    font-weight: 600;
 }
 
 .s-title{
@@ -165,6 +169,7 @@ canvas{
     margin-top: 200px;
     margin-left: 4ch;
     margin-bottom: 20px;
+    width: 15ch;
 }
 
 .s-title__txt{
@@ -183,9 +188,70 @@ canvas{
     margin-top: -400px;
 }
 
-.pres--bck::before{
-    content: "";
-    background-color: red;
-    height: 300px;
-    width: 100%;
+.grid-template{
+    padding-top: 20ch;
+    background-color: rgb(0, 0, 0);
+    z-index: 999;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.grid__title{
+    overflow-y: hidden;
+    max-width: 13ch;
+    color: #fff;
+    font-family: machina;
+    font-size: 40px;
+    grid-area: 1 / 2 / 2 / 5;
+    line-height: 1;
+}
+
+.grid__ligne{
+    margin-top: 20px;
+    margin-right: 30px;
+    border-top: #fff solid 1px;
+    grid-area: 2 / 2 / 3 / 9;
+}
+
+.grid__svg{
+    height: 100px;
+    margin-top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-area: 2 / 9 / 3 / 10;
+    animation-name: rotate-center;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate-center {
+    0%{
+      transform: rotate(0);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+.grid__txt{
+    color: #fff;
+    font-size: 26px;
+    grid-area: 4 / 2 / 7 / 5;
+}
+
+.grid__img{
+    height: 34vw;
+    max-height: 530px;
+    grid-area: 4 / 6 / 11 / 11;
+}
+
+.grid__img-blur{
+    height: 58vw;
+    max-height: 1000px;
+    grid-area: 1 / 1 / 10 / 6;
 }

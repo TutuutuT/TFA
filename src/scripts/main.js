@@ -135,7 +135,7 @@ const scene = new THREE.Scene()
 scene.background = new THREE.Color( 0x00000 );
 
 const light = new THREE.SpotLight()
-light.position.set(0, 5, 20)
+light.position.set(0, 5, 10)
 scene.add(light)
 
 const camera = new THREE.PerspectiveCamera(
@@ -163,7 +163,7 @@ controls.object = false;
 
 const loader = new GLTFLoader()
 loader.load(
-    'assets/images/Apple3.glb',
+    'assets/images/tel.glb',
     function (gltf) {
         scene.add(gltf.scene)
     },
@@ -210,9 +210,8 @@ const timeline = gsap.timeline({
   scrollTrigger: {
     trigger: renderer.domElement,
     start: 'top top',
-    end: '+=1000px',
+    end: '+=800',
     //end premiere 1000px
-    pin: true,
     scrub: true,  
 	markers: true, 
   }
@@ -225,51 +224,36 @@ timeline
 .to(camera.position, { y: 7,ease: "none" })
 .to(camera.position, { y: 8,ease: "none" })
 .to(camera.position, { y: 9,ease: "none" })
+.to(camera.position, { y: 9,ease: "none" })
 .to(camera.position, { y: 9,ease: "none" })//end premiere 1000px
-// .to(camera.position, { x: -5,ease: "none" })
 
 
 //anim gsap
 
 
 gsap.from(".title", {
-    scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
+    scrollTrigger: ".s-title",
     y: 100,
     delay: 0.5,
   });
 
 gsap.from(".list__item", {
-    scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
+    scrollTrigger: ".s-title",
     y: 100,
     delay: 0.7,
     stagger: 0.05,
+  });
+
+  gsap.from(".style-list", {
+    scrollTrigger: ".s-title",
+    y: 100,
+    delay: 0.7,
   });
 
   gsap.from(".button-nav", {
-    scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
+    scrollTrigger: ".s-title",
     y: 100,
     opacity: 0,
-    delay: 0.7,
+    delay: 1,
     stagger: 0.05,
-  });
-
-  gsap.from(".button-nav--bck", {
-    scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
-    y: 100,
-    opacity: 0,
-    delay: 0.7,
-    stagger: 0.05,
-  });
-
-
-  gsap.to("#three", {
-    scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
-    display: "none",
-    markers: true,
-  });
-
-  gsap.to(".nest-head", {
-    scrollTrigger: ".title", // start the animation when ".box" enters the viewport (once)
-    display: "none",
-    markers: true,
   });
