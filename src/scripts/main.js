@@ -210,7 +210,7 @@ const timeline = gsap.timeline({
   scrollTrigger: {
     trigger: renderer.domElement,
     start: 'top top',
-    end: '+=800',
+    end: '+=2500',
     //end premiere 1000px
     scrub: true,  
 	markers: true, 
