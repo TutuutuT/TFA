@@ -113,7 +113,9 @@ const compressImages = (done) => {
         "./src/assets/images/**/*.jpg",
         "./src/assets/images/**/*.png",
         "./src/assets/images/**/*.gif",
-        "./src/assets/images/**/*.svg"
+        "./src/assets/images/**/*.svg",
+        "./src/assets/images/**/*.glb",
+        "./src/assets/images/**/*.webp"
     ])
 
     if (useImageOptim) {
