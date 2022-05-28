@@ -255,6 +255,11 @@ gsap.from(".list__item", {
     stagger: 0.05,
   });
 
+
+
+
+  
+
   var numberElement1 = document.getElementById('number1');
   var numberValue1 = { value: 0, endValue: 40 };
     gsap.to(numberValue1, {
