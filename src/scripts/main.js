@@ -183,9 +183,6 @@ function onWindowResize() {
     render()
 }
 
-const stats = Stats()
-document.body.appendChild(stats.dom)
-
 function animate() {
     requestAnimationFrame(animate)
 	renderer.render(scene, camera)
@@ -232,28 +229,68 @@ timeline
 
 
 gsap.from(".title", {
-    scrollTrigger: ".s-title",
+    scrollTrigger: ".intro__title",
     y: 100,
     delay: 0.5,
   });
 
 gsap.from(".list__item", {
-    scrollTrigger: ".s-title",
+    scrollTrigger: ".intro__title",
     y: 100,
     delay: 0.7,
     stagger: 0.05,
   });
 
   gsap.from(".style-list", {
-    scrollTrigger: ".s-title",
+    scrollTrigger: ".intro__title",
     y: 100,
     delay: 0.7,
   });
 
   gsap.from(".button-nav", {
-    scrollTrigger: ".s-title",
+    scrollTrigger: ".intro__title",
     y: 100,
     opacity: 0,
     delay: 1,
     stagger: 0.05,
   });
+
+  var numberElement1 = document.getElementById('number1');
+  var numberValue1 = { value: 0, endValue: 40 };
+    gsap.to(numberValue1, {
+      scrollTrigger: ".grid-stat__b",
+      value: numberValue1.endValue,
+      duration: 4,
+      roundProps: 'value',
+      ease: 'power2.inOut',
+      onUpdate: () => {
+        numberElement1.innerHTML = numberValue1.value;
+      },
+    });
+
+  var numberElement2 = document.getElementById('number2');
+  var numberValue2 = { value: 0, endValue: 29 };
+    gsap.to(numberValue2, {
+      scrollTrigger: ".grid-stat__b",
+      value: numberValue2.endValue,
+      duration: 4,
+      roundProps: 'value',
+        ease: 'power2.inOut',
+      onUpdate: () => {
+        numberElement2.innerHTML = numberValue2.value;
+      },
+    });
+  
+  var numberElement = document.getElementById('number3');
+  var numberValue = { value: 0, endValue: 532 };
+    gsap.to(numberValue, {
+      scrollTrigger: ".grid-stat__b",
+      value: numberValue.endValue,
+      duration: 4,
+      roundProps: 'value',
+      ease: 'power2.inOut',
+      onUpdate: () => {
+        numberElement.innerHTML = numberValue.value;
+      },
+    });
+    

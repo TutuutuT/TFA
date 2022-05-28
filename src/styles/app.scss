@@ -451,6 +451,14 @@ canvas{
     color: #fff;
 }
 
+.list__item--footer a img{
+    height: 30px;
+}
+
+.list__item--footer a:hover{
+    color: rgb(119, 119, 119);
+}
+
 .list__item--footer--logo{
     font-size: 40px;
     font-family: Machina;
@@ -468,14 +476,24 @@ canvas{
     margin-right: 5px;
     margin-left: 5px;
     background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 100%;
+    transition: 200ms;
+
+    &:hover{
+        background-color: rgb(119, 119, 119);
+    }
 }
 
 .footer__contact-list__item svg{
     width: 36px;
+}
+
+.footer__contact-list__item a{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .copyright{
