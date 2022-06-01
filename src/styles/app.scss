@@ -136,6 +136,10 @@ canvas{
     font-size: 65px;
     width: 10ch;
     position: absolute;
+
+    & a{
+        width: fit-content;
+    }
 }
 
 .navbar{
@@ -250,7 +254,7 @@ canvas{
 
 .tel-grid__image{
     width: 100%;
-    margin-left: -100px;
+    margin-left: -15%;
     grid-area: 1 / 1 / 5 / 9;
     padding-bottom: 150px;
 }

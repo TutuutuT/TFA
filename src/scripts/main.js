@@ -29,105 +29,6 @@ gsap.from('.b-titre',{
 });
 
 
-
-// import * as THREE from 'three';
-// import { TetrahedronBufferGeometry } from 'three';
-
-// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-
-// const scene = new THREE.Scene();
-
-// const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
-// const renderer = new THREE.WebGLRenderer();
-// renderer.setClearColor(0x00000)
-// renderer.setSize( window.innerWidth, window.innerHeight );
-// document.body.appendChild( renderer.domElement );
-
-// // const geometry = new THREE.BoxGeometry(128, 262, 15);
-// // const material = new THREE.MeshBasicMaterial( { 
-    
-// //     color: 0xFFFFFF,
-// // 	wireframe: true,
-   
-// // } );
-
-
-
-
-// function onLoadCallback(loaded) {
-// 	// just output the length for arrays and binary blobs
-// 	if (loaded.length) {
-// 	  console.log("Loaded", loaded.length);
-// 	} else {
-// 	  console.log("Loaded", loaded);
-// 	}
-// }
-
-// function onProgressCallback(progress) {
-// 	console.log("Progress", progress);
-//   }
-//   function onErrorCallback(error) {
-// 	console.log("Error", error)
-//   }
-
-
-
-
-
-    
-// const cube = new THREE.Mesh( geometry, material );
-// scene.add( cube );
-
-// camera.position.z = 500;
-
-// function animate() {
-// 				requestAnimationFrame( animate );
-
-// 				cube.rotation.x += 0.00;
-// 				cube.rotation.y += 0.01;
-
-// 				renderer.render( scene, camera );
-// 			};
-
-// 			animate();
-
-
-
-// // const loader = new GLTFLoader();
-
-// // loader.load( 'src/assets/images/banana.glb', function ( gltf ) {
-
-// // 	scene.add( gltf.scene );
-
-// // }, undefined, function ( error ) {
-
-// // 	console.error( error );
-
-// // } );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ////Iphone
 
 
@@ -210,7 +111,6 @@ const timeline = gsap.timeline({
     end: '+=2500',
     //end premiere 1000px
     scrub: true,  
-	markers: true, 
   }
 })
 
