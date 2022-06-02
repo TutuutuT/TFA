@@ -1,0 +1,150 @@
+.intro-CS{
+    background-color: #000;
+    z-index: 999;
+    position: relative;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    overflow: hidden;
+}
+
+.intro-CS::before{
+    content: "";
+    height: 60%;
+    width: 40%;
+    background-image: url(../assets/images/intro__img.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 999;
+    margin-left: -22vw;
+}
+
+.intro-CS::after{
+    content: "";
+    height: 70%;
+    width: 50%;
+    background-image: url(../assets/images/oval-intro.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 999;
+    margin-top: 320px;
+    margin-left: 72vw;
+}
+
+.intro-CS__title{
+    font-family: 'Machina';
+    font-size: 150px;
+    color: white;
+    grid-area: 3 / 2 / 5 / 7;
+    max-width: 15ch;
+    line-height: 1;
+    overflow-y: hidden;
+
+    &::after{
+        content: "NFT Nest.";
+        color: white;
+        font-size: 32px;
+        position: absolute;
+        top: 600px;
+        margin-left: -470px;
+    }
+}
+
+.intro__blur{
+    grid-area: 1 / 1 / 8 / 5;
+    width: 100%;
+    margin-top: -40%;
+}
+
+.graph{
+
+    &-template{
+        padding-top: 20ch;
+        background-color: rgb(0, 0, 0);
+        z-index: 999;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+    
+    &__title{
+        overflow-y: hidden;
+        max-width: 13ch;
+        color: #fff;
+        font-family: machina;
+        font-size: 40px;
+        grid-area: 1 / 2 / 2 / 5;
+    }
+
+    &__txt{
+        color: #fff;
+        font-size: 26px;
+        grid-area: 4 / 2 / 7 / 5;
+    }
+
+    &__img{
+        height: 80%;
+        max-height: 530px;
+        grid-area: 4 / 2 / 11 / 10;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__img-blur{
+        height: 58vw;
+        max-height: 1000px;
+        grid-area: 1 / 1 / 10 / 6;
+    }
+
+
+}
+.procc{
+
+    &-template{
+        padding-top: 20ch;
+        background-color: rgb(0, 0, 0);
+        z-index: 999;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+    &__txt{
+        color: #fff;
+        font-size: 26px;
+        grid-area: 5 / 2 / 7 / 7;
+        font-weight: 400;
+        font-size: 25px;
+    }
+
+    &__cat{
+        grid-area: 4 / 2 / 7 / 5;
+        color: #fff;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    &__img{
+        height: 80%;
+        max-height: 530px;
+        grid-area: 4 / 2 / 11 / 10;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__img-blur{
+        height: 58vw;
+        max-height: 1000px;
+        grid-area: 1 / 1 / 10 / 6;
+    }
+}
