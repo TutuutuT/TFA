@@ -52,6 +52,7 @@ const renderer = new THREE.WebGLRenderer()
 // renderer.shadowMap.enabled = true
 // renderer.outputEncoding = THREE.sRGBEncoding
 renderer.setSize(window.innerWidth, window.innerHeight)
+renderer.setPixelRatio(window.devicePixelRatio);
 // document.body.appendChild(renderer.domElement)
 document.getElementById("three").appendChild(renderer.domElement)
 
@@ -121,8 +122,8 @@ timeline
 .to(camera.position, { y: 7,ease: "none" })
 .to(camera.position, { y: 8,ease: "none" })
 .to(camera.position, { y: 9,ease: "none" })
-.to(camera.position, { y: 9,ease: "none" })
-.to(camera.position, { y: 9,ease: "none" })//end premiere 1000px
+.to(camera.position, { y: 10,ease: "none" })
+.to(camera.position, { y: 10,ease: "none" })//end premiere 1000px
 
 
 //anim gsap

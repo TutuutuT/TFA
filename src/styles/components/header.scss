@@ -1,0 +1,114 @@
+.nest-head{
+    position: absolute;
+    color: white;
+    z-index: 99;
+    width: 100%;
+    margin-top: 42vh;
+    overflow: hidden;
+}
+
+.header{
+    padding-top: 50px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 70%);
+}
+
+.title{
+    color: white;
+    font-size: 40px;
+    margin-left: 2ch;
+    font-family: "Machina";
+}
+
+.t-titre{
+    overflow: hidden;
+    background-color: transparent;
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.b-titre{
+    overflow: hidden;
+    background-color: transparent;
+    font-size: 65px;
+    width: 10ch;
+    position: absolute;
+
+    & a{
+        width: fit-content;
+    }
+}
+
+.navbar{
+    width: fit-content;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    overflow-y: hidden;
+}
+
+.style-list{
+    overflow: hidden;
+}
+
+.list__item{
+    display: inline-block;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin-left: -5px;
+    border-left: 1px solid white;
+}
+
+.list__item a:hover{
+    color: rgb(119, 119, 119);
+    cursor: pointer;
+}
+
+.list__item a{
+    color: rgb(255, 255, 255);
+    transition: 200ms;
+}
+
+.button-nav{
+    position: relative;
+    width: 120px;
+    height: 46px;
+    background: rgb(255, 255, 255);
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-right: 5ch;
+    margin-top: -46px;
+    z-index: 99;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.button-nav:hover{
+    background: rgb(0, 0, 0);
+    border: 1px solid #fff;
+    transition: 200ms;
+}
+
+.button-nav:hover .button-nav__txt{
+    color: #fff;
+    transition: 200ms;
+}
+
+.button-nav__txt{
+    margin-left: auto;
+    margin-right: auto;
+    color: #000;
+    font-weight: 600;
+}
