@@ -494,3 +494,22 @@ canvas{
     }
     }
 }
+
+
+@media (max-width : 1070px) {
+    .intro::before{
+        display: none;
+    }
+    
+    .intro::after{
+        display: none;
+    }
+
+    .intro__title {
+        grid-area: 3/2/6/10;
+    }
+
+    .intro__title__txt {
+        grid-area: 6/2/8/9;
+    }
+}
