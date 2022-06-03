@@ -1,3 +1,13 @@
+.title__span{
+    font-size: 18px;
+    position: absolute;
+    z-index: 999;
+    line-height: 1;
+    overflow: hidden;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
 .intro-CS{
     background-color: #000;
     z-index: 999;
@@ -106,7 +116,7 @@
 
 
 }
-.procc{
+.tx{
 
     &-template{
         padding-top: 20ch;
@@ -115,16 +125,24 @@
         position: relative;
         display: grid;
         grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(9, 1fr);
+        grid-template-rows: repeat(11, 1fr);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
     }
     &__txt{
         color: #fff;
-        font-size: 26px;
-        grid-area: 5 / 2 / 7 / 7;
+        grid-area: 5 / 2 / 9 / 8;
         font-weight: 400;
         font-size: 25px;
+        opacity: 60%;
+
+        &--2{
+        grid-area: 7 / 2 / 9 / 8;
+        color: #fff;
+        font-weight: 400;
+        font-size: 25px;
+        opacity: 60%;
+        }
     }
 
     &__cat{
