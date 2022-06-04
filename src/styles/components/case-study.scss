@@ -165,4 +165,30 @@
         max-height: 1000px;
         grid-area: 1 / 1 / 10 / 6;
     }
+
+    &__list{
+        grid-area: 9 / 2 / 9 / 10;
+        display: flex;
+        align-content: space-between;
+        color: #fff;
+
+        &__item{
+           width: 230px;
+           display: inline-block;
+
+            &__img{
+
+            }
+
+            &__title{
+
+            }
+
+            &__txt{
+
+            }
+        }
+        
+
+    }
 }
