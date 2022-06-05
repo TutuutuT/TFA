@@ -112,3 +112,50 @@
     color: #000;
     font-weight: 600;
 }
+
+
+@media (max-width : 1000px){
+    
+    .header{
+        padding-top: 50px;
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        z-index: 1000;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 70%);
+    }
+    
+    .title{
+        font-size: 30px;
+        margin-left: 1ch;
+    }
+    
+    .navbar{
+        display: none;
+    }
+    
+    .button-nav{
+        margin-right: 1ch;
+        margin-top: 0px;
+    }
+    
+    .button-nav:hover{
+        background: rgb(0, 0, 0);
+        border: 1px solid #fff;
+        transition: 200ms;
+    }
+    
+    .button-nav:hover .button-nav__txt{
+        color: #fff;
+        transition: 200ms;
+    }
+    
+    .button-nav__txt{
+        margin-left: auto;
+        margin-right: auto;
+        color: #000;
+        font-weight: 600;
+    }
+}
