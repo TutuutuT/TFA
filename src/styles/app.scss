@@ -306,12 +306,21 @@ canvas{
     color: #fff;
     font-size: 26px;
     grid-area: 4 / 2 / 7 / 5;
+    z-index: 999;
 }
 
 .grid__img{
     height: 34vw;
     max-height: 530px;
     grid-area: 4 / 6 / 11 / 11;
+    z-index: 999;
+
+    &--blur{
+        grid-area: 4 / 1 / 11 / 11;
+        width: 100%;
+        opacity: 60%;
+        z-index: 998;
+    }
 }
 
 .grid__img-blur{
