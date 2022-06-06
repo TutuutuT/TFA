@@ -91,7 +91,7 @@ canvas{
     background-size: cover;
     position: absolute;
     z-index: 999;
-    margin-top: 320px;
+    margin-top: 300px;
     margin-left: 72vw;
 }
 
@@ -188,6 +188,31 @@ canvas{
     position: relative;
     background-color: #000;
     padding-top: 50px;
+
+    &::after{
+        content: "";
+        height: 70%;
+        width: 50%;
+        background-image: url(../assets/images/oval-intro.png);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        z-index: 999;
+        margin-top: 50px;
+        margin-left: 72vw;
+    }
+
+    &::before{
+        content: "";
+        height: 70%;
+        width: 60%;
+        background-image: url(../assets/images/intro__img.png);
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        z-index: 999;
+        margin-left: -35vw;
+    }
 
     &__b{
         
