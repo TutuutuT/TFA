@@ -545,6 +545,10 @@ canvas{
     .grid__img{
         height: 100%;
         grid-area: 6 / 2 / 11 / 11;
+        
+        &--blur{
+            display: none;
+        }
     }
     
     .grid__img--rassemble{
@@ -561,6 +565,7 @@ canvas{
     .grid__img--cree{
         width: 100%;
         height: auto;
+        margin-top: 30px;
     }
     
     .grid-test{
