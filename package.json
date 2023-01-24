@@ -13,7 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.8.6",
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.11",
     "eslint": "^7.21.0",
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
