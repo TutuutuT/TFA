@@ -26,7 +26,7 @@
     "rimraf": "^3.0.2",
     "sass": "^1.49.7",
     "three": "^0.138.3",
-    "webpack": "^5.68.0",
+    "webpack": "^5.76.0",
     "webpack-stream": "^7.0.0",
     "yargs": "^17.3.1"
   },
